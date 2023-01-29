@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const mangerQuestions = [
+const managerQuestions = [
   {
     type: "input",
     name: "Name",
@@ -14,24 +14,26 @@ const mangerQuestions = [
   },
   {
     type: "input",
-    name: "What is the team manager's email address?",
-    message: "email",
+    name: "email",
+    message: "What is the team manager's email address?",
   },
   {
     type: "input",
     name: "officeNum",
-    message: "What is the team mangers number?",
+    message: "What is the team mangears number?",
   },
-]
+];
+
 const roleQuest = [
   {
     type: "choice",
     name: "role",
     message: "What is the employees title?",
     choice: ["engineer", "intern"],
-  }
+  },
 ];
-const engineerQuest= [
+
+const engineerQuest = [
   {
     type: "input",
     name: "name",
@@ -50,20 +52,23 @@ const engineerQuest= [
 ];
 
 const interQuest = [
-    {
-        type: "input",
-        name: "name",
-        message: "What is the inter's name?",
-      },
-      {
-        type: "input",
-        name: "idNum",
-        message: "What is the intern's ID?",
-      },
-      {
-        type: "input",
-        name: "What is their school?",
-        message: "",
-      },
-    ];
-]
+  {
+    type: "input",
+    name: "name",
+    message: "What is the inter's name?",
+  },
+  {
+    type: "input",
+    name: "idNum",
+    message: "What is the intern's ID?",
+  },
+  {
+    type: "input",
+    name: "What is their school?",
+    message: "",
+  },
+];
+
+inquirer.prompt(managerQuestions).then((response) => {
+  console.log(response);
+});
