@@ -4,18 +4,22 @@ const details = [];
 
 const generateCard = (name, id, email, contact, position) => {
   var contactLine = "";
+  var icon = "";
   if (position === "Manager") {
+    icon = '<i class="fas fa-mug-hot"></i>';
     contactLine = `Phone number: ${contact}`;
   } else if (position === "Engineer") {
+    icon = '<i class="fas fa-glasses"></i>';
     contactLine = `GitHub: <a href="https://github.com/${contact}">${contact}</a>`;
   } else if (position === "Intern") {
+    icon = '<i class="fas fa-graduation-cap"></i>';
     contactLine = `School: ${contact}`;
   }
 
   const html = `<div class="card">
           <div class="top-card">
             <div id="name">${name}</div>
-            <div id="position">${position}</div>
+            <div id="position">${icon} ${position}</div>
           </div>
           <div class="bottom-card">
             <div class="detail-box" id="idNum">ID:${id}</div>
@@ -156,6 +160,10 @@ function generateHtml() {
     <title>Team Profile Generator</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
   </head>
 
   <body>
