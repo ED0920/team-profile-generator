@@ -28,6 +28,7 @@ const generateCard = (name, id, email, contact, position) => {
           </div>
         </div>`;
   details.push(html);
+  return html;
 };
 
 const managerQuestions = [
@@ -186,3 +187,5 @@ function generateHtml() {
     err ? console.log(err) : console.log("Successfully created index.html!")
   );
 }
+
+exports.generateCard = generateCard;
