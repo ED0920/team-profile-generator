@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const details = [];
 
+// replace position on card pending on choosen role selected
 const generateCard = (name, id, email, contact, position) => {
   var contactLine = "";
   var icon = "";
@@ -15,7 +16,7 @@ const generateCard = (name, id, email, contact, position) => {
     icon = '<i class="fas fa-graduation-cap"></i>';
     contactLine = `School: ${contact}`;
   }
-
+  // card template to dislay each user
   const html = `<div class="card">
           <div class="top-card">
             <div id="name">${name}</div>
@@ -31,6 +32,7 @@ const generateCard = (name, id, email, contact, position) => {
   return html;
 };
 
+// set of managers questions
 const managerQuestions = [
   {
     type: "input",
@@ -63,6 +65,7 @@ const roleQuest = [
   },
 ];
 
+// set of questions for engineering role
 const engineerQuest = [
   {
     type: "input",
@@ -86,6 +89,7 @@ const engineerQuest = [
   },
 ];
 
+// set of intern questions
 const internQuest = [
   {
     type: "input",
@@ -153,6 +157,7 @@ const callRoleQuestRecursively = () => {
   });
 };
 
+// generate HTML page once questions are completed and user hits finished
 function generateHtml() {
   const html = `<!DOCTYPE html>
 <html lang="en-US">

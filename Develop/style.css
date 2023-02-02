@@ -1,3 +1,4 @@
+/* Header coloured red & title in purple */
 header {
   text-align: center;
   padding-top: 25px;
@@ -10,6 +11,8 @@ header {
 .main {
   align-items: center;
 }
+
+/* */
 .card-container {
   display: flex;
   flex-direction: row;
@@ -29,6 +32,7 @@ header {
   box-shadow: 5px 5px lightgrey;
 }
 
+/* card header coloured in red & text in purple */
 .top-card {
   background-color: #6d597a;
   padding: 10px 20px 10px 20px;
@@ -40,6 +44,7 @@ header {
   font-size: 12px;
 }
 
+/* card shadow outline */
 .detail-box {
   border: 1px solid lightgray;
   text-indent: 5px;
